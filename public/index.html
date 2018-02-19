@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style type="text/css">
+      .rendertxt{
+        display:block;
+      }
+      .rendertxt.is-active{
+        display: none;
+      }
+      .render:after{
+      	content:"（表示中）";
+      	display:inline-block;
+      }
+      .render.is-active:after{
+      	content:"（非表示中）";
+      	display:inline-block;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>	
+</head>
+<body>
+	<div id='root'>
+		<script src='bundle.js'></script>
+	</div>
+<script>
+$('.checkbox').click(function(){
+  $('.rendertxt').toggleClass('is-active');
+});	
+$('.checkbox').click(function(){
+  $('.render').toggleClass('is-active');
+});	
+</script>
+</body>
+</html>
