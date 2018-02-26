@@ -1,22 +1,23 @@
 import React from 'react'
 
 const initialState = {
-  name: "テストテストテスト",
-  chk: false,
+  name: "テスト",
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'RENDER_NAME': {
-      return {
-      	name:text
+      return { 
+      	name:action.text
       }
     }
-    case 'RENDER_CHK': {
-      return {
-      }
-    }
+    default :
+    return state
   }
 }
 
+
+
 export default reducer
+
+

@@ -1,10 +1,9 @@
 import React from 'react'
-
+let nextid = 0
 export function renderName(text) {
-  return { type: 'RENDER_NAME', text }
+	return {
+		type: 'RENDER_NAME',
+		id: nextid++,
+		text
+	}
 }
-
-export function renderChk(value) {
-  return { type: 'RENDER_CHK', value }
-}
-
