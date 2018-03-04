@@ -1,9 +1,10 @@
 import React from 'react'
-let nextid = 0
-export function renderName(text) {
+let nextid = 1
+export function renderName(text,id) {
 	return {
 		type: 'RENDER_NAME',
-		id: nextid++,
-		text
+		id:nextid++,
+		text,
 	}
+
 }

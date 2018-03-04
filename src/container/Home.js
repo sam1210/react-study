@@ -5,7 +5,6 @@ import { bindActionCreators } from 'redux'
 import * as AppActions from './../actions/AppActions'
 class Home extends React.Component {
   render () {
-    console.log('this.props.name is', this.props.name)
     return (
       <div>
         <form onSubmit={(e) => {
@@ -16,7 +15,7 @@ class Home extends React.Component {
           <button type='submit'>送信</button>
         </form>
         <p id="post"></p>
-        {this.props.name}
+        {name}
       </div>
     ) 
   }
@@ -35,7 +34,7 @@ const mapDispatchToProps = (dispatch) => ({
   )
 })
 
-const mapStateToProps = store => ({name: store.name});
+const mapStateToProps = (state) => ({name: state.name});
 
 export default connect(mapStateToProps,mapDispatchToProps)(Home)
 // export default Home
